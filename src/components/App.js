@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   render() {
-    const indianCity = this.cityList.filter((city) => city.country == 'India');
+    const indianCity = this.cityList.filter((city) => city.country == 'India').slice(0,3);
     const listItem = indianCity.map((city , index) => <li key={`location${index + 1}`}>{city.name}</li>);
     return (
       <div id="main">
